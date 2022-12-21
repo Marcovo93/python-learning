@@ -14,7 +14,9 @@ def OpenApp():
 def HandelCommand():
     cmd = sys.argv[1]
     if cmd == 'open':
-        OpenApp()  
+        OpenApp()
+    elif cmd == 'move':
+          print('move')
 
 def HasCommand():
     return len(sys.argv) >= 2
