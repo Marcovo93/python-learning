@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+
+
+
 import os,sys
 
 
@@ -15,9 +19,19 @@ def HandelCommand():
     cmd = sys.argv[1]
     if cmd == 'open':
         OpenApp()
-    elif cmd == 'move':
-          print('move')
+    elif cmd == 'cat':
+        handleCat()
+        
 
+def handleCat():
+    CatFile = sys.argv[2]
+    file = open(CatFile, 'r')
+    lines = file.readlines()
+    print(' ')
+    for line in lines:   
+        print(line, end="")
+          
+          
 def HasCommand():
     return len(sys.argv) >= 2
 
